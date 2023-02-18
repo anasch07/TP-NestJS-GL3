@@ -1,5 +1,4 @@
 import { Global, Module } from '@nestjs/common';
-import { CommonModuleService } from './common-module.service';
 import { v4 as uuid } from 'uuid';
 const uuidProvider = {
   useValue: uuid,
@@ -7,7 +6,7 @@ const uuidProvider = {
 };
 @Global()
 @Module({
-  providers: [uuidProvider, CommonModuleService],
-  exports: [uuidProvider, CommonModuleService],
+  providers: [uuidProvider],
+  exports: [uuidProvider],
 })
 export class CommonModuleModule {}
