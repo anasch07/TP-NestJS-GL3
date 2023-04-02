@@ -6,5 +6,4 @@ export class Todo {
   description: string;
   createdAt: Date;
   status: statusEnum;
-
 }

@@ -1,13 +1,13 @@
-import {
-  IsNotEmpty, IsString,
-} from 'class-validator';
+import { IsNotEmpty, IsString, MaxLength, MinLength } from 'class-validator';
+import { ErrorsEnum } from '../../enums/ErrorsEnum';
 
 export class AddTodoDto {
-  @IsString()
-  @IsNotEmpty()
+  @IsNotEmpty({ message: ErrorsEnum.REQUIRED_FIELD })
+  @MinLength(3)
+  @MaxLength(10)
   name: string;
-
+  @IsNotEmpty({ message: ErrorsEnum.REQUIRED_FIELD })
   @IsString()
-  @IsNotEmpty()
+  @MaxLength(10)
   description: string;
 }

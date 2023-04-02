@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Version,
 } from '@nestjs/common';
 import { Todo } from './Schema/todo.schema';
 import { AddTodoDto } from './dto/addTodo.dto';
@@ -21,8 +22,8 @@ export class TodoController {
   }
 
   @Post()
-  create(@Body() todo: AddTodoDto): Todo {
-    return this.todoService.create(todo);
+  async create(@Body() todo: AddTodoDto): Promise<Todo> {
+    return this.todoService.createV1(todo);
   }
 
   @Get(':id')
