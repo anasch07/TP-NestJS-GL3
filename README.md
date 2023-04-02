@@ -1,3 +1,31 @@
+# TODO TP NestJS
+
+[//]: # (title)
+<p>The goal of this project is to create a simple TODO list application and 
+get familiar with NestJS and his fundamentals.</p>
+
+[//]: # (description)
+
+
+[//]: # (bullet list)
+## Features
+- [x] Create a new TODO
+- [x] List all TODOs (with pagination)
+- [x] Get a TODO by id
+- [x] Update a TODO
+- [x] Delete a TODO
+- [x] Mark a TODO as done ,ongoing or waiting
+- [x] Filter TODOs by status & name
+- [x] Used ValidationPipes
+- [x] Used Swagger to document the API
+- [x] Used TypeORM (MySQL)
+- [x] Used Versioning API (v1, v2)
+- [x] Pagination (limit, offset)
+
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
